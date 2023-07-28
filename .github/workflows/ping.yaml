@@ -1,13 +1,17 @@
 name: Health_ping
 
 on:
-  push:
-    branches:
-      - master
-      # note that your "main" branch might be called main instead of master
-  pull_request:
-    branches: [master]
-    types: [opened, synchronize]
+  schedule:
+    - cron: "1 0-23 * * *"
+  #push:
+  #  branches:
+  #    - master
+  # note that your "main" branch might be called main instead of master
+  #pull_request:
+  #  branches: [master]
+  #  types: [opened, synchronize]
+
+  #1 0-23 * * *
 
 jobs:
   simple_health_ping:
